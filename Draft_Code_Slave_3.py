@@ -12,7 +12,7 @@
 #https://circuitdigest.com/microcontroller-projects/mpu6050-gyro-sensor-interfacing-with-raspberry-pi
 #Accessed first on July 27, 2019
 
-#All the cited code has been adapted, debugged and mixed by the student(JCFG) to meet the specific requirements of this project.
+#All the cited code has been adapted, debugged and mixed by Juan Carlos Fernandez to meet the specific requirements of the transport network.
 
 #Library to run several concurrent threads
 import threading
