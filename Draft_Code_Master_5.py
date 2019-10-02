@@ -14,7 +14,7 @@
 #https://people.csail.mit.edu/albert/bluez-intro/x232.html
 #Accessed first on July 25, 2019
 
-#All the cited code has been adapted, debugged and mixed by the student(JCFG) to meet the specific requirements of this project.
+#All the cited code has been adapted, debugged and mixed by Juan Carlos Fernandez to meet the specific requirements of the transport network.
 
 #Library to run several concurrent threads
 import threading
@@ -81,10 +81,10 @@ IOT_CLIENT = "new_Client"
 SHADOW_HANDLER = "RP0_Coordinator"
 
 # AWS: The unique hostname generated for the network master, and the corresponding certificates. Must match the ones in the platform:
-HOST_NAME = "a21pjdlpf6kgjm-ats.iot.us-east-1.amazonaws.com"
-ROOT_CA = "AmazonRootCA1.pem"
-PRIVATE_KEY = "52cfd43850-private.pem.key"
-CERT_FILE = "52cfd43850-certificate.pem.crt"
+HOST_NAME = ""#This section must match the keys and certificates provided by the AWS platform.
+ROOT_CA = ""
+PRIVATE_KEY = ""
+CERT_FILE = ""
 
 # AWS: Create, configure, and connect the shadow client for the AWS Platform.
 myShadowClient = AWSIoTMQTTShadowClient(SHADOW_CLIENT)
@@ -106,7 +106,7 @@ myMQTTClient.configureMQTTOperationTimeout(5)
 
 # AWS: Create a programmatic representation of the shadow and the topic:
 myDeviceShadow = myShadowClient.createShadowHandlerWithName(SHADOW_HANDLER, True)
-mytopic = "London/25/RP0Coordinator"
+mytopic = "" #This topic must match the MQTT topic in AWS
 
 #PC (Passenger counter): Declare the global variables for the video frame and passenger counter:
 width = 0
